@@ -1,0 +1,79 @@
+{
+  "scope": "Four hand-specified franchise queries; not general recommendation accuracy.",
+  "baseline": "Original CountVectorizer title retrieval / first matching tag rows",
+  "model": "Weighted TF-IDF with normalized, partial, and fuzzy title retrieval",
+  "mean_baseline_precision_at_5": 0.35,
+  "mean_improved_precision_at_5": 1.0,
+  "cases": [
+    {
+      "query": "harry potter",
+      "relevance_rule": "^Harry Potter",
+      "baseline": [
+        "Harry Potter and the Philosopher's Stone",
+        "Epic Movie"
+      ],
+      "improved": [
+        "Harry Potter and the Chamber of Secrets",
+        "Harry Potter and the Prisoner of Azkaban",
+        "Harry Potter and the Goblet of Fire",
+        "Harry Potter and the Order of the Phoenix",
+        "Harry Potter and the Half-Blood Prince"
+      ],
+      "baseline_precision_at_5": 0.2,
+      "improved_precision_at_5": 1.0
+    },
+    {
+      "query": "lord of the rings",
+      "relevance_rule": "The (Lord of the Rings|Hobbit)",
+      "baseline": [
+        "Seed of Chucky",
+        "The Adventures of Huck Finn"
+      ],
+      "improved": [
+        "The Lord of the Rings: The Two Towers",
+        "The Lord of the Rings: The Return of the King",
+        "The Lord of the Rings: The Fellowship of the Ring",
+        "The Hobbit: An Unexpected Journey",
+        "The Hobbit: The Battle of the Five Armies"
+      ],
+      "baseline_precision_at_5": 0.0,
+      "improved_precision_at_5": 1.0
+    },
+    {
+      "query": "star wars",
+      "relevance_rule": "Star Wars|Empire Strikes Back|Return of the Jedi",
+      "baseline": [
+        "Star Wars: Clone Wars: Volume 1"
+      ],
+      "improved": [
+        "The Empire Strikes Back",
+        "Return of the Jedi",
+        "Star Wars: Episode III - Revenge of the Sith",
+        "Star Wars: Episode II - Attack of the Clones",
+        "Star Wars: Episode I - The Phantom Menace"
+      ],
+      "baseline_precision_at_5": 0.2,
+      "improved_precision_at_5": 1.0
+    },
+    {
+      "query": "batman",
+      "relevance_rule": "Batman|Dark Knight",
+      "baseline": [
+        "The Dark Knight Rises",
+        "Batman v Superman: Dawn of Justice",
+        "The Dark Knight",
+        "Batman Begins",
+        "Batman & Robin"
+      ],
+      "improved": [
+        "Batman & Robin",
+        "Batman Returns",
+        "The Dark Knight",
+        "Batman Forever",
+        "The Dark Knight Rises"
+      ],
+      "baseline_precision_at_5": 1.0,
+      "improved_precision_at_5": 1.0
+    }
+  ]
+}

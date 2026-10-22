@@ -1,0 +1,11 @@
+Backend-Flask/myenv/
+Backend-Flask/.venv/
+Backend-Flask/data/merged_movies.csv
+Backend-Flask/data/similarity.pkl
+Backend-Flask/data/recommender.joblib
+**/__pycache__/
+Frontend-React/node_modules/
+Frontend-React/dist/
+Frontend-React/test-results/
+Frontend-React/playwright-report/
+.env
